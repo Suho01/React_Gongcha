@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.navMenu::after {
+    content: "";
+    position: absolute;
+    background-color: #cf3e58;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+.navMenu:hover::after {
+    transform: scaleX(100%);
+}
+::selection {
+    background: #983b43;
+    color: #ffffff;
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+    position: absolute;
+    color: #666;
+}
+.swiper-button-prev::after {
+    left: 1000%;
+}
+.swiper-button-next::after {
+    right: 1000%;
+}
+.search {
+    background: #fff url("./../public/img/search.gif") right 0 no-repeat;
+}
