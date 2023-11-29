@@ -47,3 +47,12 @@ a {
 .search {
     background: #fff url("./../public/img/search.gif") right 0 no-repeat;
 }
+.howto {
+    background-image: url("./../public/img/brand_main_section3_img.jpg");
+}
+.membership {
+    background-image: url("./../public/img/membership.jpg");
+}
+.newopen {
+    background-image: url("./../public/img/newopen.jpg");
+}
