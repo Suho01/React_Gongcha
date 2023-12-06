@@ -50,11 +50,14 @@ a {
     background: #fff url("./../public/img/search.gif") right 0 no-repeat;
 }
 .howto {
-    background: url("./../public/img/brand_main_section3_img.jpg") ;
+    background-image: url("./../public/img/brand_main_section3_img.jpg");
+    background-size: cover;
 }
 .membership {
     background-image: url("./../public/img/membership.jpg");
+    background-size: cover;
 }
 .newopen {
     background-image: url("./../public/img/newopen.jpg");
+    background-size: cover;
 }

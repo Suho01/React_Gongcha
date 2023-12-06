@@ -106,7 +106,7 @@ function Nav() {
                     {/* pc nav end */}
 
                     {/* mobile nav start */}
-                    <div className="lg:hidden w-full fixed bg-white z-20 top-10">
+                    <div className="lg:hidden w-full fixed bg-white z-20 top-10 px-5">
                         <ul className="basis-full text-center flex justify-between items-center h-8 px-5 mb-7">
                             <li><NavLink href='/'><img src="./../../img/logo.png" alt="logo" /></NavLink></li>
                             <li className="cursor-pointer z-[51]" onClick={() => toggleHamburger()}>
