@@ -55,7 +55,7 @@ function Nav() {
                                     })
                                 }
                             </ul>
-                            <div className='text-sm font-normal flex justify-between flex-wrap transition-all duration-500 w-full overflow-hidden h-0 group-hover:h-[250px] after:absolute after:w-screen after:h-0 after:left-0 after:bg-[#666]/80 after:duration-500 after:-z-10 after:border-b group-hover:after:h-[260px]'>
+                            <div className='text-sm font-normal flex justify-between flex-wrap transition-all duration-500 w-full overflow-hidden h-0 group-hover:h-[250px] after:absolute after:w-screen after:h-0 after:left-0 after:bg-[#3F3A39]/90 after:duration-500 after:-z-10 after:border-b group-hover:after:h-[260px]'>
                                 {
                                     Array(6).fill().map((_, i) => {
                                         return (
@@ -63,7 +63,7 @@ function Nav() {
                                                 {
                                                     subMenu[i].map((e) => {
                                                         return (
-                                                            <li><NavLink href='/' className='text-white'>{e}</NavLink></li>
+                                                            <li><NavLink href='/' className='text-white hover:text-[#cf3e58]'>{e}</NavLink></li>
                                                         );
                                                     })
                                                 }
