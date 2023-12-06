@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Nav() {
     const navMenu = [
@@ -36,12 +38,18 @@ function Nav() {
         ["통신사 제휴", "결제 서비스"],
         ["이벤트", "공차소식"]
     ];
+
+    const [hamburger, setHamburger] = useState(false);
+    const toggleHamburger = () => {
+        setHamburger(!hamburger);
+    };
     
     return (
         <>
             <div className='w-screen h-[110px] bg-white fixed top-0 left-1/2 -translate-x-1/2 z-50'>
                 <div className='lg:max-w-7xl h-full bg-white mx-auto'>
-                    <div className='flex text-center'>
+                    {/* pc nav start */}
+                    <div className='lg:flex text-center hidden'>
                         <div className='basis-[5%] w-[62px] h-[81px] mt-[14.5px]'>
                             <NavLink href='/'><img src="./../../img/logo.png" alt="logo" /></NavLink>
                         </div>
@@ -55,6 +63,8 @@ function Nav() {
                                     })
                                 }
                             </ul>
+
+                            {/* pc subnav start */}
                             <div className='text-sm font-normal flex justify-between flex-wrap transition-all duration-500 w-full overflow-hidden h-0 group-hover:h-[250px] after:absolute after:w-screen after:h-0 after:left-0 after:bg-[#3F3A39]/90 after:duration-500 after:-z-10 after:border-b group-hover:after:h-[260px]'>
                                 {
                                     Array(6).fill().map((_, i) => {
@@ -72,6 +82,7 @@ function Nav() {
                                     })
                                 }
                             </div>
+                            {/* pc subnav end */}
                         </div>
                         <div className='flex text-[13px] text-[#3b3b3b] h-[110px] leading-[110px] basis-[30%] relative'>
                             <div className='w-1/2 flex justify-around items-center'>
@@ -92,6 +103,32 @@ function Nav() {
                             </div>
                         </div>
                     </div>
+                    {/* pc nav end */}
+
+                    {/* mobile nav start */}
+                    <div className="lg:hidden w-full fixed bg-white z-20 top-10">
+                        <ul className="basis-full text-center flex justify-between items-center h-8 px-5 mb-7">
+                            <li><NavLink href='/'><img src="./../../img/logo.png" alt="logo" /></NavLink></li>
+                            <li className="cursor-pointer z-[51]" onClick={() => toggleHamburger()}>
+                                {
+                                    hamburger ? <FontAwesomeIcon icon={faXmark} className='text-4xl' /> : <FontAwesomeIcon icon={faBars} className='text-4xl' />
+                                }
+                            </li>
+                        </ul>
+                        <div className={`fixed bg-[#3F3A39]/90 top-0 h-screen z-50 p-20 pt-40 duration-500 ${hamburger ? 'right-0' : '-right-72'}`}>
+                            <ul className="text-white">
+                                {
+                                    navMenu.map((e, i) => {
+                                        return (
+                                            <li key={i} className="mb-10 text-lg relative cursor-pointer text-center">{e.en}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    {/* mobile nav end */}
+                    
                 </div>
             </div>
 
@@ -112,7 +149,7 @@ function Nav() {
                         Array(6).fill().map((_, i) => {
                             return (
                                 <>
-                                    <SwiperSlide key={i}><img src={`./../../img/slide${i + 1}.jpg`} alt={i + 1} className='w-[2560px] h-[850px] object-cover mx-auto' /></SwiperSlide>
+                                    <SwiperSlide key={i}><img src={`./../../img/slide${i + 1}.jpg`} alt={i + 1} className='lg:w-[2560px] lg:h-[850px] md:h-[600px] h-[400px] object-cover mx-auto' /></SwiperSlide>
                                 </>
                             )
                         })

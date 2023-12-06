@@ -5,8 +5,8 @@ function Footer() {
     const footer2 = ["서울 종로구 종로 47(공평동, 7층)", "㈜공차코리아 대표이사 박재홍", "사업자등록번호 214-88-84534", "통신판매번호: 2020-서울종로-0966"];
 
     return (
-        <div className='w-full h-[166px] flex bg-[#f1f2f3]'>
-            <div className='flex w-[650px] h-[168px] bg-[#575757] text-[#b5b4b4] text-xs justify-around items-end pb-[30px] pl-[300px] box-border'>
+        <div className='w-full lg:h-[166px] lg:flex bg-[#f1f2f3]'>
+            <div className='flex lg:w-[650px] lg:h-[168px] bg-[#575757] text-[#b5b4b4] text-xs justify-around items-end pb-[30px] pl-[300px] box-border'>
                 <img src="./../../img/ft_logo.png" alt="ft_logo" className='w-[69px] h-[90px]' />
                 <p>(C)GONGCHA KOREA CO.,LTD<br />ALL RIGHTS RESERVED.</p>
             </div>

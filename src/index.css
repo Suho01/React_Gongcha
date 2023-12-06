@@ -34,21 +34,23 @@ a {
     background: #983b43;
     color: #ffffff;
 }
+@media screen and (min-width: 1024px) { /* pc ver */    
+    .swiper-button-prev::after {
+        left: 1000%;
+    }
+    .swiper-button-next::after {
+        right: 1000%;
+    }
+}
 .swiper-button-prev::after, .swiper-button-next::after {
     position: absolute;
     color: #666;
-}
-.swiper-button-prev::after {
-    left: 1000%;
-}
-.swiper-button-next::after {
-    right: 1000%;
 }
 .search {
     background: #fff url("./../public/img/search.gif") right 0 no-repeat;
 }
 .howto {
-    background-image: url("./../public/img/brand_main_section3_img.jpg");
+    background: url("./../public/img/brand_main_section3_img.jpg") ;
 }
 .membership {
     background-image: url("./../public/img/membership.jpg");
