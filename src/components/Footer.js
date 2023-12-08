@@ -10,7 +10,7 @@ function Footer() {
                 <img src="./../../img/ft_logo.png" alt="ft_logo" className='w-[69px] h-[90px]' />
                 <p>(C)GONGCHA KOREA CO.,LTD<br />ALL RIGHTS RESERVED.</p>
             </div>
-            <div className='w-[900px] h-[166px]'>
+            <div className='lg:w-[900px] lg:h-[166px]'>
                 <ul className='flex justify-between p-5 font-bold text-[15px] items-center'>
                     {
                         footer1.map((e, i) => {
